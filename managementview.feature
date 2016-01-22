@@ -1,16 +1,16 @@
-Feature: Viewing QA Dashboard
+Feature: Viewing QA Dashboard for Management
 	As a member of management
 	I want to view weekly and monthly success rate by workflow
 	So that I can understand when and where to take action to 
 	improve system health
-
+	
 	Scenario: manager searches for failing workflows
 		Given I am logged in as management
 		And a workflow is failing at a higher rate this week than 6 month 
 		average
 		When I query critical workflows
 		Then I should see graphs showing workflows with decreased success rates
-	
+
 	Scenario: manager views overall success rate
 	  	Given I am logged in as management
 	  	When I view the system overall success rate 
@@ -34,9 +34,16 @@ Feature: Viewing QA Dashboard
 	  	Then I should see the daily success rate benchmark for the past 7 days
 	  	Then I should see the standard deviation of success rate this week
 	  	Then I should see a box and whiskers graph of success rate this month
+	  	Then I should see the known issues that affect this workflow
+	  	Then I should see the impact on and response from users
+	  	Then I should see the engineering perspective of the problem
+	  	Then I should see the history of issues with this workflow
+	  	Then I should see a list of top reasons this workflow has failed
+	  	Then I should be able to differentiate an abort from a fail
+	  	Then I should be able to view tickets associated with this workflow
 	 
 	Scenario: manager finds responsibility holders for workflow
 	    Given I am logged in as management
 	    And the workflow has been assigned members
 	    When I view the workflow success rate
-	    Then I should be able to ping members of this workflow
+	    Then I should be able to view members associated with this workflow
