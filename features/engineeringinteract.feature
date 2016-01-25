@@ -5,11 +5,11 @@
 #___________________
 Feature: Interacting with QA Dashboard for Engineering
 	As a member of engineering
-	I want to be able to contextualize workflow failure
+	I want to contextualize workflow failure
 	So that I can influence the flow of system improvements
 	
-	Scenario: engineer adds workflow context
+	Scenario: engineer specified perspective should be stored in workflow success
 		Given I am logged in as engineering
-		And a workflow success rate requires more context
-		When I view the workflow success rate 
-		Then I should be able to specify engineering perspective of the problem
+		When I view a workflow success
+		And I specify engineering perspective of the problem
+		Then the engineering perspective I specify should be stored in workflow success
