@@ -1,7 +1,7 @@
-#File: managementinteract.feature
-#Base: none
+# File: managementinteract.feature
+# Base: none
 #
-#Basic interaction feature
+# Basic interaction feature
 #___________________
 Feature: Interacting with QA Dashboard for Management
 	As a member of management

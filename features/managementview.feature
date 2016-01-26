@@ -1,7 +1,7 @@
-#File: managementview.feature
-#Base: none
+# File: managementview.feature
+# Base: none
 #
-#Basic viewing feature
+# Basic viewing feature
 #___________________
 Feature: Viewing QA Dashboard for Management
 	As a member of management
@@ -24,7 +24,7 @@ Feature: Viewing QA Dashboard for Management
 		Then I should see the 6 month weekly average success rate for each workflow
 		And I should see the past week daily average success rate for each workflow
 		And I should see the past 7 days daily average success rate for each workflow
-		And I should see a user user impact score for eash workflow
+		And I should see a user impact score for each workflow
 		And I should see the risk score for each workflow
 
 	Scenario: critical workflows are highlighted in red
